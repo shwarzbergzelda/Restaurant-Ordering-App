@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Restaurant Ordering App</title>
 </head>
 <body>
     
@@ -30,6 +30,34 @@
         <button id="complete-order-btn">Complete order</button>
     </footer>
 
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="checkout-modal">
+            <h2>Enter card details</h2>
+            <form id="payment-form">
+                <input
+                    name="customerName"
+                    type="text" 
+                    placeholder="Enter your name" 
+                    required
+                >
+                <input
+                    name="cardNumber"
+                    type="text" 
+                    placeholder="Enter card number" 
+                    required
+                >
+                <input
+                    name="cvv"
+                    type="text" 
+                    placeholder="Enter CVV" 
+                    required
+                >
+                <button id="pay-btn" type="submit">Pay</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirmation-msg"></div>
 
     <script type="module" src="index.js"></script>
 </body>

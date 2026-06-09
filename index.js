@@ -3,6 +3,10 @@ const menu = document.getElementById('menu')
 const orderDetails = document.getElementById('order-details')
 const orderItems = document.getElementById('order-items')
 const orderTotal = document.getElementById('order-total')
+const modalOverlay = document.getElementById('modal-overlay')
+const completeOrderBtn = document.getElementById('complete-order-btn')
+const paymentForm = document.getElementById('payment-form')
+const confirmationMsg = document.getElementById('confirmation-msg')
 
 let itemsAddedToOrder = []
 
@@ -88,3 +92,23 @@ function renderOrder() {
 
     orderDetails.style.display = "flex";
 }
+
+completeOrderBtn.addEventListener('click', () => {
+    modalOverlay.style.display = 'block'
+})
+
+paymentForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    orderDetails.style.display = 'none';
+    modalOverlay.style.display = 'none';
+
+    const customerName = paymentForm.customerName.value
+
+    confirmationMsg.textContent =  `
+        Thanks ${customerName}! Your order is on its way!
+    `
+
+    confirmationMsg.style.display = 'flex';
+
+})
