@@ -3,6 +3,8 @@ body {
     font-family: "Smythe", system-ui;
 }
 
+/* Hero styling */
+
 .hero {
     height: 275px;
     overflow: hidden;
@@ -37,6 +39,8 @@ body {
 .hero-text h2 {
     font-size: 40px;
 }
+
+/* Menu styling */
 
 .food-emoji {
     font-size: 150px;
@@ -74,4 +78,70 @@ body {
 
 .menu-info {
     font-size: 25px;
+}
+
+/* Footer styling */
+#order-details {
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    display: none;
+}
+
+#order-details h3 {
+    font-size: 30px;
+}
+
+#complete-order-btn {
+    background-color: #16DB99;
+    color: white;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 800px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#order-items {
+    width: 100%;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.order-item h4,
+.order-item h5 {
+    margin: 0;
+}
+
+.order-item h5 {
+    margin-left: auto;
+}
+
+.remove-item-btn {
+    border: none;
+    background-color: white;
+    color: #BBBBBB;
+}
+
+#order-total {
+    width: 100%;
+    margin-top: 25px;
+    border-top: 2px solid black;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 35px;
 }
